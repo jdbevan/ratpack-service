@@ -1,0 +1,9 @@
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly "org.immutables:value:2.8.8:annotations"
+    annotationProcessor "org.immutables:value:2.8.8"
+    implementation "org.immutables:builder:2.8.8"
+}
