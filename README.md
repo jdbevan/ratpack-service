@@ -21,7 +21,7 @@ WARNING: All illegal access operations will be denied in a future release
 com.adaptavist.cloud.interviews.DynamicModulesRegistrarSpec > should return a promise of true if a dynamic module is registered successfully FAILED
     org.spockframework.runtime.ConditionNotSatisfiedError at DynamicModulesRegistrarSpec.groovy:69
 
-com.adaptavist.cloud.interviews.DynamicModulesRegistrarSpec > should return a promise of false if dynamic module registration request fails FAILED
+com.adaptavist.cloud.interviews.DynamicModulesRegistrarSpec > should return a promise of false if dynamic module registration request experiences a socket timeout FAILED
     org.spockframework.runtime.ConditionNotSatisfiedError at DynamicModulesRegistrarSpec.groovy:105
 
 8 tests completed, 2 failed

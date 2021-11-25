@@ -87,13 +87,13 @@ class DynamicModulesRegistrarSpec extends Specification {
         !response.throwable
     }
 
-    def "should return a promise of false if dynamic module registration request fails"() {
+    def "should return a promise of false if dynamic module registration request experiences a socket timeout"() {
         given:
         1 * proxyClient.proxyWithPayload(TENANT,
                 HttpMethod.POST,
                 _ as URIParts,
                 dynamicModules,
-                ExecutionUser.ADD_ON) >> Promise.error(new RuntimeException("Failed to resolve DNS"))
+                ExecutionUser.ADD_ON) >> Promise.error(new SocketTimeoutException("Socket timed out after 10 seconds"))
 
         when:
         def response = ExecHarness.yieldSingle {
