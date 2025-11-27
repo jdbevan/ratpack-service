@@ -83,7 +83,7 @@ class DynamicModulesRegistrarSpec extends Specification {
         }
 
         then:
-        !response.value
+        response.value == false
         !response.throwable
     }
 
@@ -101,7 +101,7 @@ class DynamicModulesRegistrarSpec extends Specification {
         }
 
         then:
-        !response.value
+        response.value == false
         !response.throwable
     }
 
