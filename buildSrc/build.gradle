@@ -1,0 +1,25 @@
+plugins {
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'groovy-gradle-plugin'
+}
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+dependencies {
+    implementation gradleApi()
+
+    implementation "io.ratpack:ratpack-gradle:2.0.0-rc-1"
+}
+
+gradlePlugin {
+    plugins {
+        adaptavistRatpackGroovyPlugin {
+            id = 'adaptavist-ratpack-groovy-plugin'
+            implementationClass = 'com.adaptavist.gradle.plugin.RatpackGroovyPlugin'
+        }
+    }
+}

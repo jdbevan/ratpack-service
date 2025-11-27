@@ -2,7 +2,7 @@ This repo contains some code implemented using Ratpack's Promise implementation,
 
 Tests will fail on first run and the code needs fixing to make them pass.
 
-You will need Java 11 SDK installed and JAVA_HOME set on your PATH environment variable.
+You will need Java 17 SDK installed and JAVA_HOME set on your PATH environment variable.
 
 You should be able to run `./gradlew test` in order to run the tests in the repo. If you are running on a Windows machine you can run `./gradlew.bat test` instead.
 

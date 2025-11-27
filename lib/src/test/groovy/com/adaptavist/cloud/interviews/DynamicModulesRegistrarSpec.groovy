@@ -18,14 +18,14 @@ import com.fasterxml.jackson.datatype.guava.GuavaModule
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module
 import io.netty.buffer.Unpooled
 import ratpack.exec.Promise
-import ratpack.http.Headers
-import ratpack.http.HttpMethod
-import ratpack.http.MediaType
-import ratpack.http.Status
-import ratpack.http.client.ReceivedResponse
-import ratpack.http.client.internal.DefaultReceivedResponse
-import ratpack.http.internal.ByteBufBackedTypedData
-import ratpack.http.internal.DefaultMediaType
+import ratpack.core.http.Headers
+import ratpack.core.http.HttpMethod
+import ratpack.core.http.MediaType
+import ratpack.core.http.Status
+import ratpack.core.http.client.ReceivedResponse
+import ratpack.core.http.client.internal.DefaultReceivedResponse
+import ratpack.core.http.internal.ByteBufBackedTypedData
+import ratpack.core.http.internal.DefaultMediaType
 import ratpack.test.exec.ExecHarness
 import spock.lang.Specification
 

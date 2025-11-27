@@ -5,14 +5,14 @@ import com.adaptavist.cloud.interviews.services.ProxyClient;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 import com.google.inject.Inject;
+import ratpack.core.http.HttpMethod;
+import ratpack.core.http.client.ReceivedResponse;
 import ratpack.exec.Promise;
-import ratpack.http.HttpMethod;
-import ratpack.http.client.ReceivedResponse;
 
 import java.util.List;
 
-import static ratpack.http.Status.NO_CONTENT;
-import static ratpack.http.Status.OK;
+import static ratpack.core.http.Status.NO_CONTENT;
+import static ratpack.core.http.Status.OK;
 
 public class DynamicModulesRegistrar {
 

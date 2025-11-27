@@ -1,15 +1,7 @@
-buildscript {
-    dependencies {
-        classpath "io.ratpack:ratpack-gradle:1.8.1"
-    }
-}
-
 plugins {
-    id 'groovy'
-    id 'java-library'
+    id 'adaptavist-ratpack-groovy-plugin'
 }
 
-apply plugin: "io.ratpack.ratpack-groovy"
 apply from: "${rootDir}/gradle/immutables.gradle"
 
 repositories {
@@ -19,12 +11,14 @@ repositories {
 dependencies {
     implementation 'com.google.guava:guava:30.0-jre'
     implementation 'org.immutables:value:2.8.8'
-    implementation 'com.fasterxml.jackson:jackson-base:2.12.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.17.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-guava:2.17.2'
     implementation 'org.hibernate:hibernate-validator:5.4.2.Final'
     implementation 'javax.validation:validation-api:2.0.1.Final'
 
-    testImplementation 'org.codehaus.groovy:groovy-all:2.5.13'
-    testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5'
+    testImplementation 'org.apache.groovy:groovy-all:4.0.28'
+    testImplementation 'org.spockframework:spock-core:2.4-M1-groovy-4.0'
     testImplementation 'junit:junit:4.13'
 }
 
